@@ -1,0 +1,27 @@
+h1 Oma Linux
+Raportin kirjoittaminen
+-	Raportin tulisi olla täsmällinen, ja sitä tulisi kirjoittaa kokoajan samalla, kun touhuaa Linuxin kanssa jotain.
+-	Sen tulisi olla myös helppolukuinen
+-	Muista viitata lähteisiin.
+-	Plagiointi ehdottomasti kielletty, vain omaa tekstiä!
+
+Free Software Foundation
+-	FSF Free Software Definition määrittelee vapaiden ohjelmistojen neljä keskeistä vapautta, joihin kaikilla on oikeus.
+-	Vapaus 0: Käyttäjä voi käyttää ohjelmistoa vapaasti mihin tahansa.
+-	Vapaus 1: Käyttäjä voi tarkastella ohjelman lähdekoodia ja muokata sitä omiin tarpeisiin
+-	Vapaus 2: Käyttäjä voi jakaa ohjelmiston muille ihmisille ilman minkäänlaisia rajoituksia.
+-	Vapaus 3: Kuka tahansa voi parantaa ohjelmaa ja muokata oman maun mukaan, ja jakaa sitä versiota muille.
+
+a.)	Asenna Linux Virtuaalikoneeseen.
+a.	Aloitin lataamalla viimeisimmän Debian liven heidän sivuiltaan (https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/ ) 
+b.	Aloitin luomalla virtualboxiin uuden virtuaalikoneen, ja määritin kaikki asetukset
+c.	Tämän tehtyäni boottasin Debianin Live modessa.
+d.	Päästyäni sisään, testasin nopeasti että sovellukset toimii avaamalla Firefoxin ja googlailemalla jotain, kaikki toimii.
+e.	Install Debian. Tässä kohtaa määritin tietokoneen kielen, sijainnin, näppäimistöni kielen sekä loin käyttäjäni.
+f.	Sen jälkeen asensin Debianin, tässä meni noin 10 minuuttia jonka jälkeen käynnistin virtuaalikoneen uudelleen, ja kaikki toimii.
+
+Lähteet:
+Karvinen, Tero 2006: Raportin kirjoittaminen https://terokarvinen.com/2006/raportin-kirjoittaminen-4/ 
+Gnu: What is Free Software?: https://www.gnu.org/philosophy/free-sw.html#four-freedoms 
+Karvinen, Tero 2021: Install Debian on Virtualbox – Updated 2024 https://terokarvinen.com/2021/install-debian-on-virtualbox/ 
+https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/ 
