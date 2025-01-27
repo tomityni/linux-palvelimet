@@ -14,7 +14,15 @@ a.) Asenna micro-editori
 
 - Aluksi sudo apt-get update
 
-![Image](https://github.com/user-attachments/assets/234d3de5-cae8-4625-b800-28cd7965a196) 
-  
+Sitten:
+- sudo apt-get install micro
+
+Tämän jälkeen loin microlla teksititedoston
+
+- micro teksti.txt
+
+Kirjoittelin sinne jotain satunnaista, jonka jälkeen Ctrl + S tallensin sen, ja Ctrl + Q poistuin editorista
+
+
   
 Lähteet: Karvinen Tero 2020: Command Line Basics Revisited https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited 
