@@ -10,9 +10,11 @@ x) Tiivistelmä Karvinen Tero 2020: Command Line Basics Revisited https://teroka
 - Kysymys: Miten Linux-aloittelijan tulisi lähestyä komentoriviä ja sen perusteita niin, että muutkin kuin edellä mainitut peruskomennot tulisivat tutuiksi?
   Esimerkiksi millaisia helppoja projekteja voisi alkaa työstämään? Riittääkö tämän kurssin koti- ja tuntitehtävät siihen, vai pitäisikö aloittaa jokin oma henkilökohtainen projekti?
 
+
 a.) Asenna micro-editori
 
 - Aluksi sudo apt-get update
+
 
 Sitten:
 - sudo apt-get install micro
@@ -24,5 +26,64 @@ Tämän jälkeen loin microlla teksititedoston
 Kirjoittelin sinne jotain satunnaista, jonka jälkeen Ctrl + S tallensin sen, ja Ctrl + Q poistuin editorista
 
 
-  
+b.) Asensin omaan Linuxiin 3 ohjelmaa:
+
+- htop: Ohjelma, jolla voui tarkkailla ja hallita pyöriviä prosesseja
+- tree: Näyttää tietokoneen hakemistorakenteen ns puumuodossa. Tämä on mielestäni paras näistä kolmesta, sillä se auttaa ainakin itseäni hahmottamaan linuxin hakemistorakenteen helpommin.
+- neofetch: Näyttää kyseisen järjestelmän oleellisia tietoja nätisti, a must have!
+
+
+c.) tärkeät kansiot
+
+
+- /- Root directory
+Root directory on Linuxin juurihakemisto, josta kaikki muut hakemistot alkavat.
+- /home/ käyttäjien kotihakemistot
+ls /home/ listaa kaikkien luotujen käyttäjien kotihakemistot, minulla sieltä löytyy vain tomit, eli minun henkilökohtainen hakemisto
+
+
+/home/tomit
+Kuten jo mainitsin, tämä on minun henkilökohtainen hakemisto johon käyttäjä tomit voi tallentaa ja muokata omia tiedostojaan
+Minun omasta kotihakemistosta löytyy: Desktop Documents Downloads Music Pictures Public teksti.txt Templates Videos viikonpäivät
+
+
+/etc/
+Täältä löytyy järjestelmän asetustiedostot.
+Esimerkkikomento on ls /etc
+Sisältöä on huimasti, esimerkiksi apahce2 ja passwd eli salasanat
+
+
+/media/ Tämä sisältää esim liitetyt USB-tikut
+ls/ media
+Minulla ei ole liitettyjä USB-tikkuja, joten sisältö on tyhjä.
+
+
+/var/log& eli järjestelmän lokitiedostot. Sisältää järjestelmän ja sovellusten lokit, kuten virhelokit
+
+
+d.) The friendly M.
+
+Tässä 2 kuvaavaa esimerkkiä grep-komennon käytöstä linuxissa:
+
+Helpoin ja nopein komento voisi olla grep "hakusana" tiedosto
+"hakusana" toimii sanana tai lauseena, jota etsit
+tiedosto: tämä on tiedoston nimi josta jotain etsitään
+
+grep -n "tomit" /etc/passwd
+35:tomit:x:1000:1000:Tomi Tyni:/home/tomit:/bin/bash
+
+Tämä komento etsii käyttäjänimen tomit ja näyttää rivinumerot joilla se esiintyy.
+
+e) Pipe 
+
+ls -1 | wc -1
+
+ls -1 listaa hakemiston sisällön riveittäin, putki eli "|" ohjaa komennon vastauksen seuraavalle komennolle, ja wc -1 laskee, kuinka monta riviä tässsä on!
+
+f.) Rauta 
+
+Asensin lshw:
+sudo apt-get install lshw.
+Tämä tulostaa näytteen, joka näyttää tietoja tietokoneesta, kuten käyttöjärjestelmän paljonko virtuaalikoneella on muistia, prosessorin jne
+
 Lähteet: Karvinen Tero 2020: Command Line Basics Revisited https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited 
