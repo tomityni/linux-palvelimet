@@ -12,7 +12,7 @@ x) Tiivistelmä Karvinen Tero 2020: Command Line Basics Revisited https://teroka
 
 a.) Asenna micro-editori
 
-(https://gyazo.com/37b39138ec4e551b9cac55c70385a941.png)
+- Aluksi sudo apt-get update
   
   
 Lähteet: Karvinen Tero 2020: Command Line Basics Revisited https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited 
