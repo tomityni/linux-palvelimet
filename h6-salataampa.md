@@ -15,7 +15,9 @@ Nämä asetukset sisältyvät virtuaalipalvelimen kokoonpanoon turvallisten yhte
 
 # a) Let's. Hanki ja asenna palvelimellesi ilmainen TLS-sertifikaatti Let's Encryptilta. Osoita, että se toimii. 
 Aloitin menemällä Lets Encryptin sivuille, ja klikkaamalla etusivun bannerista "Get started"
-ss1
+
+![kuva]ss1.png 
+
 Useimmissa tapauksissa hosting provider hakee ja hoitaa Lets encryptin sertifikaatit, mutta koska hallinnoimme serveriä itse, täytyy ne myös hakea itse. Työkaluna käytän Legoa, koska sitä käytiin läpi aikaisemmalla tunnilla. Avattua virtuaalikoneen, tein päivitykset, potkin hieman demonia ja aloitin asentamalla Legon komennolla sudo apt-get install lego
 
 ss2
