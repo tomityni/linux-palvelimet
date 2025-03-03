@@ -14,6 +14,10 @@ Apache HTTP -palvelimen perus SSL/TLS -asetukset sisältävät SSL:n käytön (S
 Nämä asetukset sisältyvät virtuaalipalvelimen kokoonpanoon turvallisten yhteyksien varmistamiseksi.
 
 # a) Let's. Hanki ja asenna palvelimellesi ilmainen TLS-sertifikaatti Let's Encryptilta. Osoita, että se toimii. 
+Aloitin menemällä Lets Encryptin sivuille, ja klikkaamalla etusivun bannerista "Get started"
+ss1
+Useimmissa tapauksissa hosting provider hakee ja hoitaa Lets encryptin sertifikaatit, mutta koska hallinnoimme serveriä itse, täytyy ne myös hakea itse. Työkaluna käytän Legoa, koska sitä käytiin läpi aikaisemmalla tunnilla. Avattua virtuaalikoneen, tein päivitykset, potkin hieman demonia ja aloitin asentamalla Legon komennolla sudo apt-get install lego
 
+ss2
 
 # b) A-rating. Testaa oma sivusi TLS jollain yleisellä laadunvarmistustyökalulla, esim. SSLLabs (Käytä vain tavanomaisia tarkistustyökaluja, ei tunkeutumistestausta eikä siihen liittyviä työkaluja)
