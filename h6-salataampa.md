@@ -1,4 +1,4 @@
-# h6 Salataampa 28.2.2025 17:40 
+# h6 Salataampa
 ## x) Lue ja tiivistä. Tiivistelmäksi riittää muutama ranskalainen viiva per artikkeli. (Tässä alakohdassa ei tarvitse tehdä testejä tietokoneella)
 
 
