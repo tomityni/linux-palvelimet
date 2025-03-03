@@ -20,4 +20,39 @@ Useimmissa tapauksissa hosting provider hakee ja hoitaa Lets encryptin sertifika
 
 ss2
 
+
+tämän jälkeen suoritin komennon sudo lego --server=https://acme-v02.api.letsencrypt.org/directory      --accept-tos      --email=tomi.tyni.tt@gmail.com      --domains=tomityni.com --domains=www.tomityni.com      --http --http.webroot=/var/www/tomityni.com/public_html      --path=/home/tomi/.lego      --pem run
+
+ss3
+
+Tämä näytti toimivan, Lego loi kaikki sertifikaatit /home/tomi/.lego/certificates/ directoryyn.
+
+Muistin myös avata 443/tcp väylän
+
+ss4
+
+Seuraavaksi lisäsin VirtualHost 443 konffiksen /etc/apache2/sites-available/tomityni.com.conf
+
+ss5
+
+Tämän jälkeen aktivoin SSL:n komennolla sudo a2enmod ssl, ja testasin konffiksen sudo apache2ctl. Se vastasi "Syntax OK". Käynnistin apachen uudelleen, ja käväisin sivuilla kurkkaamassa, toimiko.
+
+ss6
+
+Ja näyttäisi toimivan!
+
 # b) A-rating. Testaa oma sivusi TLS jollain yleisellä laadunvarmistustyökalulla, esim. SSLLabs (Käytä vain tavanomaisia tarkistustyökaluja, ei tunkeutumistestausta eikä siihen liittyviä työkaluja)
+
+Tässä tehtävässä laadunvarmistustyökaluna käytin https://ssllabs.com 
+
+ss7 
+
+Ja tämä antoi arvosanaksi A
+
+
+# Lähteet
+
+https://terokarvinen.com/linux-palvelimet/#h6-salataampa Luettu 3.3.2025
+https://letsencrypt.org/how-it-works/ Luettu 3.3.2025
+https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/index.html#using-an-existing-running-web-server Luettu 3.3.2025
+https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html#configexample Luettu 3.3.2025
