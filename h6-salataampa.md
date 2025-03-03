@@ -16,30 +16,30 @@ Nämä asetukset sisältyvät virtuaalipalvelimen kokoonpanoon turvallisten yhte
 # a) Let's. Hanki ja asenna palvelimellesi ilmainen TLS-sertifikaatti Let's Encryptilta. Osoita, että se toimii. 
 Aloitin menemällä Lets Encryptin sivuille, ja klikkaamalla etusivun bannerista "Get started"
 
-![kuva]ss1.png 
+![kuva](ss1.png) 
 
 Useimmissa tapauksissa hosting provider hakee ja hoitaa Lets encryptin sertifikaatit, mutta koska hallinnoimme serveriä itse, täytyy ne myös hakea itse. Työkaluna käytän Legoa, koska sitä käytiin läpi aikaisemmalla tunnilla. Avattua virtuaalikoneen, tein päivitykset, potkin hieman demonia ja aloitin asentamalla Legon komennolla sudo apt-get install lego
 
-ss2
+![kuva](ss2.png) 
 
 
 tämän jälkeen suoritin komennon sudo lego --server=https://acme-v02.api.letsencrypt.org/directory      --accept-tos      --email=tomi.tyni.tt@gmail.com      --domains=tomityni.com --domains=www.tomityni.com      --http --http.webroot=/var/www/tomityni.com/public_html      --path=/home/tomi/.lego      --pem run
 
-ss3
+![kuva](ss3.png) 
 
 Tämä näytti toimivan, Lego loi kaikki sertifikaatit /home/tomi/.lego/certificates/ directoryyn.
 
 Muistin myös avata 443/tcp väylän
 
-ss4
+![kuva](ss4.png) 
 
 Seuraavaksi lisäsin VirtualHost 443 konffiksen /etc/apache2/sites-available/tomityni.com.conf
 
-ss5
+![kuva](ss5.png) 
 
 Tämän jälkeen aktivoin SSL:n komennolla sudo a2enmod ssl, ja testasin konffiksen sudo apache2ctl. Se vastasi "Syntax OK". Käynnistin apachen uudelleen, ja käväisin sivuilla kurkkaamassa, toimiko.
 
-ss6
+![kuva](ss6.png) 
 
 Ja näyttäisi toimivan!
 
@@ -47,7 +47,7 @@ Ja näyttäisi toimivan!
 
 Tässä tehtävässä laadunvarmistustyökaluna käytin https://ssllabs.com 
 
-ss7 
+![kuva](ss7.png) 
 
 Ja tämä antoi arvosanaksi A
 
